@@ -1,21 +1,22 @@
 Summary:	winitzki-cyrillic font
 Summary(pl):	Font winitzki-cyrillic
 Name:		xorg-font-font-winitzki-cyrillic
-Version:	0.99.0
-Release:	0.01
-License:	MIT
+Version:	0.99.1
+Release:	0.1
+License:	Public Domain
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/font/font-winitzki-cyrillic-%{version}.tar.bz2
-# Source0-md5:	1f074ba59affffc7d10b5bb53fd697f5
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-winitzki-cyrillic-%{version}.tar.bz2
+# Source0-md5:	512f22880a73d4bf9c70102d0a60e8f8
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util
 BuildRequires:	xorg-util-util-macros
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/cyrillic
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +32,8 @@ Font winitzki-cyrillic.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-fontdir=%{_fontsdir}/cyrillic
 
 %{__make}
 
@@ -44,6 +46,12 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+fontpostinst cyrillic
+
+%postun
+fontpostinst cyrillic
+
 %files
 %defattr(644,root,root,755)
-%{_libdir}/X11/fonts/cyrillic/*
+%{_fontsdir}/cyrillic/*
