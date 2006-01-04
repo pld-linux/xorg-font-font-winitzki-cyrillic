@@ -1,16 +1,15 @@
 Summary:	winitzki-cyrillic font
 Summary(pl):	Font winitzki-cyrillic
 Name:		xorg-font-font-winitzki-cyrillic
-Version:	0.99.1
+Version:	1.0.0
 Release:	0.1
 License:	Public Domain
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-winitzki-cyrillic-%{version}.tar.bz2
-# Source0-md5:	512f22880a73d4bf9c70102d0a60e8f8
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-winitzki-cyrillic-%{version}.tar.bz2
+# Source0-md5:	b99b02aff36a88ca3379715423c60303
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
