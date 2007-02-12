@@ -1,5 +1,5 @@
 Summary:	winitzki-cyrillic font
-Summary(pl):	Font winitzki-cyrillic
+Summary(pl.UTF-8):   Font winitzki-cyrillic
 Name:		xorg-font-font-winitzki-cyrillic
 Version:	1.0.0
 Release:	0.1
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 winitzki-cyrillic font.
 
-%description -l pl
+%description -l pl.UTF-8
 Font winitzki-cyrillic.
 
 %prep
