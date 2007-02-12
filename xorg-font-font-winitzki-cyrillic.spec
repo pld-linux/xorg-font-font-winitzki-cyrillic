@@ -1,5 +1,5 @@
 Summary:	winitzki-cyrillic font
-Summary(pl.UTF-8):   Font winitzki-cyrillic
+Summary(pl.UTF-8):	Font winitzki-cyrillic
 Name:		xorg-font-font-winitzki-cyrillic
 Version:	1.0.0
 Release:	0.1
