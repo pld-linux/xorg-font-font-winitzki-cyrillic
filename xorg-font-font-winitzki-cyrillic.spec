@@ -2,7 +2,7 @@ Summary:	Winitzki Cyrillic font
 Summary(pl.UTF-8):	Font Winitzki w cyrylicy
 Name:		xorg-font-font-winitzki-cyrillic
 Version:	1.0.0
-Release:	2
+Release:	3
 License:	Public Domain
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-winitzki-cyrillic-%{version}.tar.bz2
@@ -16,6 +16,7 @@ BuildRequires:	xorg-app-mkfontscale
 BuildRequires:	xorg-util-util-macros
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/cyrillic
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
